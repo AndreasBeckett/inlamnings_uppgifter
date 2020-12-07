@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inlämnignsuppgift 2</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
@@ -26,6 +28,11 @@
                 <a class="nav-links" href="">Contact&nbsp;Us</a>
                 <button>Get the app</button>
             </div>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </div>
     </header>
 
@@ -39,7 +46,9 @@
                     and typesetting industry Lorem Ipsum is simply
                 </p>
                 <div class="download">
-                    <button class="download-button">Download&nbsp;Now</button>
+                    <button
+                        class="download-button">Download&nbsp;Now
+                    </button>
                     <button class="watch-video">
                         <img src="Images/Video-icon.png" alt="">
                         <a href="" class="watch-video-text">Watch&nbsp;Video</a>
@@ -47,16 +56,25 @@
 
                 </div>
             </div>
-            <div>
-                <img src="Images/Mobile.png" alt="">
+            <div data-aos="fade-left">
+                <img id="iphone2" src="Images/Mobile.png" alt="">
             </div>
         </div>
     </section>
-    
+
+    <section id="section-splitter">
+        <div class="container">
+            <img class="ec-1" src="Images/ec-logo.png" alt="">
+            <img class="ec-2" src="Images/ec-logo.png" alt="">
+            <img src="Images/ec-logo.png" alt="">
+            <img src="Images/ec-logo.png" alt="">
+        </div>
+    </section>
+
     <section id="about-us">
         <div class="container">
-            <div>
-                <img class="iphone1" src="Images/iPhone.png" alt="">
+            <div id="iphone1">
+                <img src="Images/iPhone.png" alt="">
             </div>
             <div class="about-us-text">
                 <div class="part">About Us</div>
@@ -77,7 +95,7 @@
     </section>
 
     <section id="features">
-        <div class="container">
+        <div class="container" data-aos="zoom-in">
             <div class="features-text">
                 <div class="part">Features</div>
                 <h2>Easy To Search Your Items By This App</h2>
@@ -125,17 +143,45 @@
                     </div>
                 </div>    
             </div>
-            <div>
-                <img class="mobiles" src="Images/Mobile2.png" alt="">
+            <div id="mobiles">
+                <img src="Images/Mobile2.png" alt="">
             </div>
 
         </div>
     </section>
-
+    <section id="app-screen">
+    <div class="container">
+        <div class="app-screen-text">
+            <h2>Application Screens</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's</p>
+        </div>
+        <div class="carousel" data-flickity='{ "autoPlay": 2500, "wrapAround": true }'>
+            <div class="carousel-cell">
+              <img src="Images/iPhone X - Light.png" alt="" />
+            </div>
+            <div class="carousel-cell">
+                <img src="Images/iPhone X - Light.png" alt="" />
+            </div>
+            <div class="carousel-cell">
+                <img src="Images/iPhone X - Light.png" alt="" />
+            </div>
+            <div class="carousel-cell">
+                <img src="Images/iPhone X - Light.png" alt="" />
+            </div>
+            <div class="carousel-cell">
+                <img src="Images/iPhone X - Light.png" alt="" />
+            </div>            
+            <div class="carousel-cell">
+                <img src="Images/iPhone X - Light.png" alt="" />
+            </div>
+        </div>
+    </div>
+    </section>
     <section id="statistics">
         <div class="container">
             <div class="stats-header">
-                <div class="stats-title">Application Statistics</div>
+                <h2>Application Statistics</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's</p>
             </div>
@@ -171,13 +217,13 @@
                     <img src="Images/App Store.png" alt="">
                 </div>
             </div>
-            <div>
-                <img class="iphones" src="Images/iPhones.png" alt="">
+            <div id="iphones">
+                <img class="slideanim" src="Images/iPhones.png" alt="">
             </div>
         </div>
     </section>
 
-    <section id="form">
+    <section id="contact-us">
         <div class="container">
             <div class="contact-us-top">
                 <h2>Contact Us</h2>
@@ -194,7 +240,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" rows="9" placeholder="Enter Your Message"></textarea>
+                    <textarea class="form-control" rows="9" id="message" placeholder="Enter Your Message"></textarea>
                 </div>
                 <div class="btn-holder">
                     <button type="submit" class="send-btn">Send</button>
@@ -204,16 +250,16 @@
     </section>
 
     <footer>
-        <div class="container">
+        <div class="footer-wrapper">
             <div>
             <img src="Images/Logo.png" alt="">
             </div>
             <div class="footer-links">
                 <a href="">Home</a>
-                <a href="">About Us</a>
+                <a href="">About&nbsp;Us</a>
                 <a href="">Features</a>
                 <a href="">Screens</a>
-                <a href="">Contact Us</a>
+                <a href="">Contact&nbsp;Us</a>
             </div>
             <div class="socialmedia">
                 <img src="Images/Group 4454.png" alt="">
@@ -224,237 +270,11 @@
         </div>
     </footer>
 
-
-
-</body>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inlämnignsuppgift 2</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-</head>
-
-
-
-<body>
-    <div class="header-img-wrapper"></div>
-    <header>
-        <div class="container">
-            <div>
-                <img id="logo" src="Images/Logo.png" alt="">
-            </div>
-            <div class="nav-items">
-                <a class="nav-links" href="">Home</a>
-                <a class="nav-links" href="">About&nbsp;Us</a>
-                <a class="nav-links" href="">Features</a>
-                <a class="nav-links" href="">Screens</a>
-                <a class="nav-links" href="">Contact&nbsp;Us</a>
-                <button>Get the app</button>
-            </div>
-        </div>
-    </header>
-
-    <section id="showcase">
-        <div class="container">
-            <div class="showcase-app">
-                <div class="showcase-app-title">
-                    Creative Way to Showcase Your App
-                </div>
-                <p>Lorem Ipsum is simply dummy text of the printing 
-                    and typesetting industry Lorem Ipsum is simply
-                </p>
-                <div class="download">
-                    <button class="download-button">Download&nbsp;Now</button>
-                    <button class="watch-video">
-                        <img src="Images/Video-icon.png" alt="">
-                        <a href="" class="watch-video-text">Watch&nbsp;Video</a>
-                    </button>
-
-                </div>
-            </div>
-            <div>
-                <img src="Images/Mobile.png" alt="">
-            </div>
-        </div>
-    </section>
-    
-    <section id="about-us">
-        <div class="container">
-            <div>
-                <img class="iphone1" src="Images/iPhone.png" alt="">
-            </div>
-            <div class="about-us-text">
-                <div class="part">About Us</div>
-                <h2>Easy To Search Your Items By This App</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type 
-                    specimen book. It has survived not only five centuries, but also the leap into 
-                    electronic typesetting, remaining essentially unchanged. It was popularised in 
-                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                    and more recently</p>
-                <div>
-                    <img class="google-play" src="Images/Google map.png" alt="">
-                    <img src="Images/App Store.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features">
-        <div class="container">
-            <div class="features-text">
-                <div class="part">Features</div>
-                <h2>Easy To Search Your Items By This App</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled </p>
-                <div class="grid">
-                    <div class="box">
-                        <div>
-                            <img src="Images/icon1.png" alt="">
-                        </div>
-                        <div>
-                            <h3>Ease of Search</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div>
-                            <img src="Images/icon2.png" alt="">
-                        </div>
-                        <div>
-                            <h3>Manage your ads</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-                        </div>
-
-                    </div>
-                    <div class="box">
-                        <div>
-                            <img src="Images/icon3.png" alt="">
-                        </div>
-                        <div>
-                            <h3>Ease main</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div>
-                            <img src="Images/icon4.png" alt="">
-                        </div>
-                        <div>
-                            <h3>Ongoing support</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing industry.</p>
-                        </div>
-
-                    </div>
-                </div>    
-            </div>
-            <div>
-                <img class="mobiles" src="Images/Mobile2.png" alt="">
-            </div>
-
-        </div>
-    </section>
-
-    <section id="statistics">
-        <div class="container">
-            <div class="stats-header">
-                <div class="stats-title">Application Statistics</div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's</p>
-            </div>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-nr">+&nbsp;1430</div>
-                    <div class="stat-text">Clients</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-nr">+&nbsp;2430</div>
-                    <div class="stat-text">Benefications</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-nr">+&nbsp;1430</div>
-                    <div class="stat-text">Posetive reviews</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-nr">+&nbsp;10.430</div>
-                    <div class="stat-text">Downloads</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="download-now">
-        <div class="container">
-            <div class="download-now-text">
-                <div class="download-now-title">Download the application now ! to enjoy its features</div>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                <div>
-                    <img class="google-play"  src="Images/Google map.png" alt="">
-                    <img src="Images/App Store.png" alt="">
-                </div>
-            </div>
-            <div>
-                <img class="iphones" src="Images/iPhones.png" alt="">
-            </div>
-        </div>
-    </section>
-
-    <section id="form">
-        <div class="container">
-            <div class="contact-us-top">
-                <h2>Contact Us</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's</p>
-            </div>
-            <form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <input type="text" class="form-control" id="email" placeholder="Enter Your Email">
-                  </div>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" rows="9" placeholder="Enter Your Message"></textarea>
-                </div>
-                <div class="btn-holder">
-                    <button type="submit" class="send-btn">Send</button>
-                </div>
-              </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div>
-            <img src="Images/Logo.png" alt="">
-            </div>
-            <div class="footer-links">
-                <a href="">Home</a>
-                <a href="">About Us</a>
-                <a href="">Features</a>
-                <a href="">Screens</a>
-                <a href="">Contact Us</a>
-            </div>
-            <div class="socialmedia">
-                <img src="Images/Group 4454.png" alt="">
-                <img src="Images/Group 4455.png" alt="">
-                <img src="Images/Group 4456.png" alt="">
-                <img src="Images/Group 4457.png" alt="">
-            </div>
-        </div>
-    </footer>
-
-
-
+    <script src="float-panel.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
