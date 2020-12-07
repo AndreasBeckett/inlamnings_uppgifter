@@ -1,0 +1,12 @@
+$spaceamounts: (0,1,2,3,4,5,6);
+
+@each $space in $spaceamounts{
+
+    .mg-#{$space} { margin: #{$space}rem; }
+    .mgy-#{$space} { margin: #{$space}rem 0; }
+    .mgx-#{$space} { margin: 0 #{$space}rem; }
+    .mgl-#{$space} { margin-left: #{$space}rem; }
+    .mgr-#{$space} { margin-right: #{$space}rem; }
+    .mgt-#{$space} { margin-top: #{$space}rem; }
+    .mgb-#{$space} { margin-bottom: #{$space}rem; }
+}
